@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diksha Negi · Portfolio</title>
+  <meta name="description" content="Portfolio of Diksha Negi — Java developer and DevOps enthusiast." />
+  <link rel="preload" as="image" href="assets/avatar.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="#hero" aria-label="Go to top">DN</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#leetcode">LeetCode</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+        <li>
+          <button class="mode-toggle" aria-label="Toggle color mode" title="Toggle theme">🌓</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi, I’m <span class="accent">Diksha Negi</span></h1>
+          <p class="lead">
+            a Java & Spring Boot developer exploring different technologies to expand technical skills, currently learning about system design and architecture.
+         
+        </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">See Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <ul class="social">
+            <li><a href="https://github.com/DikshaNegi13" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/diksha-negi-37b0bb1b4/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:dikshanegi2019@gmail.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <img src="assets/dikshaphotu.jpg" alt="Portrait of Diksha Negi" class="avatar" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>About</h2>
+          <p>
+            I’m a Java developer with 2+ years of experience, focused on developing and optimizing scalable back-end system using 
+             Java, Spring Boot, REST APIs, Microservices to deliver high-performance
+solutions and seamless user experiences.
+          </p>
+          <p>
+            When I’m not coding, I love sketching and exploring small towns to soak in local culture.
+          </p>
+          <br>
+          <a class="btn btn-ghost" href="assets/DikshaNegi1_Resume.pdf" download="DikshaNegi_Resume.pdf">Download Résumé</a>
+        </div>
+        <ul class="highlights">
+          <li>Java, Spring Boot, REST APIs</li>
+          <li>Kafka, MySQL, Splunk,CI/CD with GitHub Actions</li>
+          <li>DSA, System Design, OOPS</li>
+          <li>OpenShift, Helm, Kubernetes</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section surface">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid" role="list">
+          <article class="skill" role="listitem"><h3>Java + Spring</h3><p>REST API, JPA, Security, JUnits,Testing</p></article>
+          <article class="skill" role="listitem"><h3>Databases</h3><p>MySQL, Redis (basics)</p></article>
+          <article class="skill" role="listitem"><h3>Messaging</h3><p>Kafka </p></article>
+          <article class="skill" role="listitem"><h3>DevOps</h3><p>Docker, Helm, Kubernetes, OpenShift</p></article>
+          <article class="skill" role="listitem"><h3>CI/CD</h3><p>GitHub Actions, Sonar, Splunk, bitbucket</p></article>
+          <article class="skill" role="listitem"><h3>Frontend</h3><p>HTML, CSS, basic JS</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project card -->
+          <article class="card">
+            <img src="assets/project2.jpg" alt="Screenshot of Mini FinTech app" />
+            <div class="card-body">
+              <h3>CreditCard Rewards Platform</h3>
+              <p>
+               Designed and developed a microservices-based Credit Card Rewards System with User, Transaction, and Rewards
+services, enabling secure user management, transaction tracking, and real-time reward point calculation.              </p>
+              <div class="tags">
+                <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>JWT</span><span>MYSQL</span><span>REST API</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/your-username/mini-fintech" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/project1.jpg" alt="Screenshot of DevOps pipelines dashboard" />
+            <div class="card-body">
+              <h3>Job Hunt Chrome Extension</h3>
+              <p>
+Build a Manifest V3 Chrome extension that automates hourly job searches via the JSearch API, stores results
+locally, and sends actionable desktop notifications
+              </p>
+              <div class="tags">
+                <span>JavaScript</span><span>Manifest V3</span><span>JSearch API</span><span>CSS HTML</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/DikshaNegi13/Job-Hunt-Chrome-Extension" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/projectface.jpg" alt="Screenshot of Java DSA utilities" />
+            <div class="card-body">
+              <h3>Face to Emoji</h3>
+              <p>
+               Trained a CNN classifier to classify 7 different emotions. Used OpenCV's Haarcascade classifier to detect faces from the incoming video stream and predict their emotions. At last we created mask of the emojis similar to the predicted emotions and applied it on the face region.
+              </p>
+              <div class="tags">
+                <span>OpenCV</span><span>Machine Learning</span><span>Python</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/DikshaNegi13/face-to-emoji" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section surface">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="time">2023 — Present</div>
+            <div class="content">
+              <h3>Java Developer · Company</h3>
+              <ul>
+                <li>Built Spring Boot microservices and BDD test suites (JUnit + Testcontainers).</li>
+                <li>Implemented CI/CD with GitHub Actions, SonarQube, and Trivy.</li>
+                <li>Dockerized apps and deployed to Kubernetes (kind) with Helm.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="time">2022 — 2023</div>
+            <div class="content">
+              <h3>Intern · Company</h3>
+              <ul>
+                <li>Created REST APIs and improved code coverage.</li>
+                <li>Helped set up basic monitoring with Prometheus + Grafana.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+      <!-- LeetCode -->
+    <section id="leetcode" class="section surface">
+      <div class="container">
+        <h2>LeetCode</h2>
+        <div class="leetcode-grid">
+
+            <article class="leetcode-item">
+               <img src="https://leetcard.jacoblin.cool/itsmedeeksha?theme=light&font=Source%20Sans%20Pro&ext=heatmap" 
+         alt="LeetCode Stats" />
+
+          </article>
+
+
+          <article class="leetcode-item">
+
+
+              <ul class="highlights">
+                <li>300+ LeetCode Problems Solved</li>
+                <li>Regularly takes part in leetcode contests</li>
+                <li><a href="https://leetcode.com/u/itsmedeeksha/">LeetCode Profile </a></li>
+
+              </ul>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Have a project, opportunity, or just want to say hi? Drop a message.</p>
+        <form id="contact-form" class="card form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Diksha Negi · Built with HTML, CSS & JS</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
