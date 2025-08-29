@@ -113,7 +113,12 @@ a:hover { text-decoration: underline; }
 .timeline .time { font-weight:700; color: var(--muted); }
 @media (max-width: 700px) { .timeline-item { grid-template-columns: 1fr; } }
 
-.leetcode-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.leetcode-grid {
+  display:grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; 
+}
+.leetcode{
+  background: var(--surface); border: 1px solid color-mix(in oklab, var(--text) 10%, transparent); 
+}
 .leetcode-grid img {
   width: 100%;
   height: 100%;
