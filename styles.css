@@ -153,6 +153,26 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px
 /* Footer */
 .site-footer { border-top: 1px solid color-mix(in oklab, var(--text) 10%, transparent); padding: 2rem 0; text-align:center; color: var(--muted); }
 
+/* Smooth color transitions when switching themes */
+body, .card, .surface, .highlights li, .skill, .timeline-item, input, textarea, .nav-menu, .btn, .site-header, .site-footer {
+  transition: background-color .40s ease, color .40s ease, border-color .40s ease, box-shadow .40s ease;
+}
+
+
 /* Utilities */
 .skip-link { position:absolute; left:-9999px; }
 .skip-link:focus { left: 1rem; top: 1rem; background: var(--primary); color: #fff; padding:.6rem 1rem; border-radius: 10px; }
+
+
+.btn { transition: transform .12s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary:hover { box-shadow: 0 14px 36px rgba(0,0,0,.28); }
+
+
+.card { transition: transform .18s ease, box-shadow .25s ease, border-color .25s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,.28); border-color: color-mix(in oklab, var(--accent) 35%, transparent); }
+.card img { transition: transform .6s ease; }
+.card:hover img { transform: scale(1.02); }
+
+
