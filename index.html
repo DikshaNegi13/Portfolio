@@ -235,25 +235,37 @@ AEM, ensuring 100% accuracy and enabling a successful content platform migration
       <div class="container">
         <h2>Contact</h2>
         <p>Have a project, opportunity, or just want to say hi? Drop a message.</p>
-        <form id="contact-form" class="card form" novalidate>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-            <small class="error" aria-live="polite"></small>
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-            <small class="error" aria-live="polite"></small>
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <small class="error" aria-live="polite"></small>
-          </div>
-          <button class="btn btn-primary" type="submit">Send</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+<form
+  id="contact-form"
+  class="card form"
+  action="https://formspree.io/f/mjkegdgy"
+  method="POST"
+  novalidate
+>
+  <div class="form-row">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" autocomplete="name" required />
+    <small class="error" aria-live="polite"></small>
+  </div>
+  <div class="form-row">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+    <small class="error" aria-live="polite"></small>
+  </div>
+  <div class="form-row">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <small class="error" aria-live="polite"></small>
+  </div>
+
+  <!-- Optional extras -->
+  <input type="hidden" name="_subject" value="New message from portfolio" />
+  <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
+
+  <button class="btn btn-primary" type="submit">Send</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
       </div>
     </section>
   </main>

@@ -34,46 +34,48 @@ modeBtn?.addEventListener("click", () => {
   localStorage.setItem(THEME_KEY, isLight ? "dark" : "light");
 });
 
-// Contact form validation (no inline styles)
 const form = document.getElementById("contact-form");
 if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const status = form.querySelector(".form-status");
-    const fields = {
-      name: form.name,
-      email: form.email,
-      message: form.message,
-    };
+    const fields = { name: form.name, email: form.email, message: form.message };
 
     // Basic validation
     let valid = true;
-    // name
-    if (!fields.name.value.trim()) {
-      setError(fields.name, "Please enter your name.");
-      valid = false;
-    } else setError(fields.name, "");
-    // email
-    if (!/^\S+@\S+\.\S+$/.test(fields.email.value)) {
-      setError(fields.email, "Enter a valid email address.");
-      valid = false;
-    } else setError(fields.email, "");
-    // message
-    if (fields.message.value.trim().length < 10) {
-      setError(fields.message, "Message should be at least 10 characters.");
-      valid = false;
-    } else setError(fields.message, "");
-
+    if (!fields.name.value.trim()) { setError(fields.name, "Please enter your name."); valid = false; } else setError(fields.name, "");
+    if (!/^\S+@\S+\.\S+$/.test(fields.email.value)) { setError(fields.email, "Enter a valid email address."); valid = false; } else setError(fields.email, "");
+    if (fields.message.value.trim().length < 10) { setError(fields.message, "Message should be at least 10 characters."); valid = false; } else setError(fields.message, "");
     if (!valid) return;
 
-    // Fake submit (replace with your endpoint / Formspree / EmailJS)
-    await new Promise((r) => setTimeout(r, 600));
-    status.textContent = "Thanks! Your message has been sent.";
-    form.reset();
+    status.textContent = "Sending…";
+
+    try {
+      const resp = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" },
+      });
+
+      if (resp.ok) {
+        status.textContent = "Thanks! Your message has been sent.";
+        form.reset();
+      } else {
+        const data = await resp.json().catch(() => ({}));
+        if (data && data.errors && data.errors.length) {
+          status.textContent = data.errors.map(e => e.message).join(", ");
+        } else {
+          status.textContent = "Oops, something went wrong. Please try again.";
+        }
+      }
+    } catch {
+      status.textContent = "Network error. Please check your connection and try again.";
+    }
   });
 }
 
 function setError(input, msg) {
   const small = input.parentElement.querySelector(".error");
-  small.textContent = msg;
+  if (small) small.textContent = msg;
 }

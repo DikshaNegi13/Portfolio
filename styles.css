@@ -132,6 +132,7 @@ a:hover { text-decoration: underline; }
   display: block;
 
 }
+.hp { display: none; }
 
 
 /* Form */
