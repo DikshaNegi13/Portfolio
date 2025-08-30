@@ -176,3 +176,16 @@ body, .card, .surface, .highlights li, .skill, .timeline-item, input, textarea, 
 .card:hover img { transform: scale(1.02); }
 
 
+.dynamic-text {
+  font-weight: 600;
+  color: var(--accent);
+  border-right: 3px solid var(--accent);
+  padding-right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-cursor 0.7s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  50% { border-color: transparent; }
+}

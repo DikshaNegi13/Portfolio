@@ -79,3 +79,40 @@ function setError(input, msg) {
   const small = input.parentElement.querySelector(".error");
   if (small) small.textContent = msg;
 }
+
+// Dynamic typing effect
+const roles = ["Diksha Negi","a Backend Developer", "a Software Engineer", "a LeetCode Enthusiast"];
+let roleIndex = 0;
+let charIndex = 0;
+const typingSpeed = 100; // ms per character
+const erasingSpeed = 60;
+const delayBetween = 1500; // pause before erasing
+
+const dynamicEl = document.getElementById("dynamic-text");
+
+function typeRole() {
+  if (!dynamicEl) return;
+  if (charIndex < roles[roleIndex].length) {
+    dynamicEl.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeRole, typingSpeed);
+  } else {
+    setTimeout(eraseRole, delayBetween);
+  }
+}
+
+function eraseRole() {
+  if (charIndex > 0) {
+    dynamicEl.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseRole, erasingSpeed);
+  } else {
+    roleIndex = (roleIndex + 1) % roles.length; // move to next role
+    setTimeout(typeRole, typingSpeed);
+  }
+}
+
+// Start when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  if (dynamicEl) setTimeout(typeRole, 500);
+});
